@@ -1,0 +1,373 @@
+/******************************* styling for profile page *******************************/
+
+#profile {
+    display: grid;
+    // grid-template-rows: 4fr 4fr;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    height:auto;
+    padding:0;
+    .profileIntro {
+        background-color: #4a9ead;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        #proimg {
+            background-color: #4a9ead;
+            display:grid;
+            grid-template-rows: 1fr 3fr 1fr 2fr 1fr;
+            #circle {
+                background-color:transparent;
+                grid-row: 2/3;
+                width:15vw;
+                height:15vw;
+                margin-left:auto;
+                margin-right:auto;
+                border-radius: 50%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                border:2px solid #e60012;
+                #circleIn {
+                    width:13vw;
+                    height:13vw;
+                    background-color: white;
+                    border-radius: 50%;
+                }
+            }
+            #name {
+                grid-row: 3/4;
+                font-size:3vw;
+                color:#001e61;
+                font-weight: bolder;
+                line-height:1.5;
+                font-family: "eurostile", sans-serif;
+
+            }
+            #title {
+                grid-row: 4/5;
+                font-size:2.5vw;
+                color:white;
+                display:grid;
+                grid-template-rows: 1fr 2fr;
+                font-family: "eurostile", sans-serif;
+
+                p {
+                    grid-row: 1/2;
+                }
+                ul {
+                    display:flex;
+                    justify-content: space-around;
+                    width:50%;
+                    margin-left:auto;
+                    margin-right:auto;
+                    margin-top:2vh;
+                    li {
+                        list-style: none;
+                        // background-color: #f32f66;
+                        width:5vw;
+                        height:3vw
+                    }
+                }
+            }
+        }
+        #protext {
+            background-color:#141c3a;
+            display: grid;
+            grid-template-rows: 1fr 2fr 1fr 2fr 2fr 1fr;
+            height:100%;
+            >div {
+                grid-row: 2/3;
+                display:flex;
+                justify-content: center;
+                align-items: flex-start;
+                img{
+                    width: 15%;
+                }
+            }
+            h1 {
+                grid-row: 3/4;
+                font-size:2.5vw;
+                color: white;
+                font-weight: bolder;
+                font-family: "eurostile", sans-serif;
+
+            }
+            p {
+                grid-row: 4/5;
+                font-size:1.8vw;
+                color: white;
+                width:60%;
+                margin-left: auto;
+                margin-right:auto;
+                font-weight: lighter;
+                line-height: 2;
+                font-family: 'Quicksand', sans-serif;
+            }
+            .moreStory {
+                grid-row: 5/6;
+                display:flex;
+                align-items: center;
+                button {
+                    background-color: transparent;
+                    color:white;
+                    font-size:2vw;
+                    font-family: 'Quicksand', sans-serif;
+                    width:35%;
+                    padding:1vw;
+                    margin-left: auto;
+                    margin-right:auto;
+                    &:focus,&:hover {
+                        outline:none;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+    }
+    .skillsets{
+        background-color: transparent;
+        display:grid;
+        padding:0 7rem;
+        grid-template-columns: 1fr;
+        .skillGroup {
+            // margin-top: -10vw;
+            // height:60vh;
+            background-color:white;
+            border-radius: 1rem;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            .skillGrid {
+                border: 1px solid #E6ECF8;
+                padding:3vw 1vw;
+                display:grid;
+                // grid-template-rows: auto auto 2fr auto 1fr;
+               h1 {
+                color:#141c3a;
+                font-size:2vw;
+                font-family: "eurostile", sans-serif;
+                // height:3vh;
+               }
+               h2 {
+                font-size:1.8vw;
+               }
+                &.skillGridDevelop {
+                    border-top-left-radius:1rem;
+                    display:grid;
+                    grid-template-columns: 1fr;
+                    grid-gap:25px;
+                    
+                    .developerIcon {
+                        width:30%;
+                        margin-left:auto;
+                        margin-right:auto;
+                        img {
+                            width:100%;
+                        }
+                    }
+                }
+                &.skillGridDesign {
+                    display:grid;
+                    grid-template-columns: 1fr;
+                    grid-gap:25px;
+                    .designerIcon {
+                        width:30%;
+                        margin-left:auto;
+                        margin-right:auto;
+                        img {
+                            width:100%;
+                        }
+                    }
+                }
+                &.skillGridTeam {
+                    border-top-right-radius:1rem;
+                    display:grid;
+                    grid-template-columns: 1fr;
+                    grid-gap:25px;
+                    .collaboratorIcon {
+                        width:30%;
+                        margin-left:auto;
+                        margin-right:auto;
+                        img {
+                            width:100%;
+                        }
+                    }
+                }
+
+                grid-gap:2vw;
+
+            }
+            
+        }
+
+    }
+}
+
+
+/* for the tablet view */
+@media screen and (max-width:800px) {
+    
+
+    #profile .skillsets {
+        background-color: white;
+        padding:0 0.5em;
+        // display:grid;
+        // grid-template-columns: 1fr 10fr 1fr;
+        .skillGroup {
+            margin-top: 0;
+            // height:60vh;
+            background-color:white;
+            border-radius: 1rem;
+            // display:flex;
+            // flex-direction: column;
+            .skillGrid {
+                border: 1px solid #E6ECF8;
+                padding:1em 0.5em;
+                display:grid;
+                grid-template-rows: 1fr 1fr 1fr;
+               h1 {
+                color:#141c3a;
+                font-size:1.5em;
+                font-family: "eurostile", sans-serif;
+                // height:3vh;
+               }
+               h2 {
+                display:none;
+               }
+               .genState{
+                   display:none;
+               }
+            }
+            
+        }
+
+    }
+}
+
+/* for the mobile view */
+@media screen and (max-width:414px) {
+    #profile {
+        .profileIntro {
+            background-color: #4a9ead;
+            display:grid;
+            grid-template-columns: 1fr;
+            #proimg {
+                #circle {
+                    width:28vw;
+                    height:28vw;
+                    #circleIn {
+                        width:25vw;
+                        height:25vw;
+                    }
+                }
+                #name {
+                    font-size:2em;
+                }
+                #title {
+                    font-size:1.8em;
+    
+                    p {
+                        grid-row: 1/2;
+                    }
+                    ul {
+                        li {   
+                            width:10vw;
+                            height:6vw
+                        }
+                    }
+                }
+            }
+            #protext {
+                background-color:#141c3a;
+                display: grid;
+                grid-template-rows: 1fr 4fr 2fr 2fr 2fr 1fr;
+                height:100%;
+                >div {
+                    grid-row: 2/3;
+                    display:flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    img{
+                        width: 25%;
+                    }
+                }
+                h1 {
+                    grid-row: 3/4;
+                    font-size:1.8em;
+                    color: white;
+                    font-weight: bolder;
+                    font-family: "eurostile", sans-serif;
+    
+                }
+                p {
+                    grid-row: 4/5;
+                    font-size:1em;
+                    color: white;
+                    width:60%;
+                    margin-left: auto;
+                    margin-right:auto;
+                    font-weight: lighter;
+                    line-height: 2;
+                    font-family: 'Quicksand', sans-serif;
+                }
+                .moreStory {
+                    grid-row: 5/6;
+                    display:flex;
+                    align-items: center;
+                    button {
+                        background-color: transparent;
+                        color:white;
+                        font-size:1.2em;
+                        font-family: 'Quicksand', sans-serif;
+                        width:50%;
+                        padding:1vw;
+                        margin-left: auto;
+                        margin-right:auto;
+                        &:focus,&:hover {
+                            outline:none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+
+        }
+        .skillsets {
+            background-color: white;
+            padding: 0 0.5em;
+            // display:grid;
+            // grid-template-columns: 1fr 10fr 1fr;
+            .skillGroup {
+                margin-top: 0;
+                // height:60vh;
+                background-color:white;
+                border-radius: 1rem;
+                display:flex;
+                flex-direction: column;
+                .skillGrid {
+                    border: 1px solid #E6ECF8;
+                    padding:3vw;
+                    display:grid;
+                    grid-template-rows: 1fr 1fr 1fr;
+                   h1 {
+                    color:#141c3a;
+                    font-size:1.5em;
+                    font-family: "eurostile", sans-serif;
+                    // height:3vh;
+                   }
+                   h2 {
+                    display:none;
+                   }
+                   .genState{
+                       display:none;
+                   }
+                }
+                
+            }
+    
+        }
+        
+    }
+}
+

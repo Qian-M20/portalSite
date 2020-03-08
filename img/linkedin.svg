@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d32f5e;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>linkedin</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Capa_1" data-name="Capa 1">
+      <circle class="cls-1" cx="256" cy="256" r="256"/>
+      <circle class="cls-2" cx="137.71" cy="135.72" r="41.72"/>
+      <rect class="cls-2" x="104.83" y="214.85" width="67.79" height="203.36"/>
+      <path class="cls-2" d="M217.8,214V417.39h67.88V294s4-30.37,33.85-30.17,33.71,31,33.71,31l.14,122.53h67.78l-.66-138.84S413.89,227.29,366,214s-78.47,23.37-80.44,27.12,0-27.12,0-27.12Z"/>
+    </g>
+  </g>
+</svg>

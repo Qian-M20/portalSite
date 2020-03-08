@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.7 130.19">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        fill: #638680;
+      }
+
+      .cls-3 {
+        font-size: 32px;
+        font-family: AbadiMT-CondensedExtraBold, Abadi MT Condensed Extra Bold;
+        letter-spacing: 0.09em;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+        font-weight: 800;
+      }
+
+      .cls-4 {
+        font-size: 40px;
+        font-family: Arial-Black, Arial Black;
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </defs>
+  <title>calendar</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M23.3,17.72H11s-5.72-.53-8,6.33,0,95,0,95,.19,9.53,9.63,9.15,109.75,0,109.75,0,6.1-2.3,7.62-7.64,0-95.35,0-95.35a7.73,7.73,0,0,0-7.24-7.48,50.84,50.84,0,0,0-13,0Z"/>
+      <path class="cls-2" d="M23.3,7V28.51s3.49,6.15,8,4.72,5.33-4.31,5.33-4.31V7S35,1.43,30,2.05,23.3,4.3,23.3,7Z"/>
+      <path class="cls-2" d="M47.66,7V28.51s3.49,6.15,8,4.72S61,28.92,61,28.92V7s-1.64-5.54-6.66-4.92S47.66,4.3,47.66,7Z"/>
+      <path class="cls-2" d="M71.49,7V28.51s3.49,6.15,8,4.72,5.34-4.31,5.34-4.31V7s-1.64-5.54-6.67-4.92S71.49,4.3,71.49,7Z"/>
+      <path class="cls-2" d="M96.5,7V28.51s3.48,6.15,8,4.72,5.33-4.31,5.33-4.31V7s-1.64-5.54-6.67-4.92S96.5,4.3,96.5,7Z"/>
+      <line class="cls-1" x1="2" y1="49.81" x2="128.94" y2="49.81"/>
+      <text class="cls-3" transform="translate(40.53 78.39)">FEB</text>
+      <text class="cls-4" transform="translate(35.34 113.37)">18</text>
+    </g>
+  </g>
+</svg>

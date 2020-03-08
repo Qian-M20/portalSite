@@ -1,0 +1,240 @@
+/******************************* styling for contact page *******************************/
+
+#contact {
+    background-color: transparent;
+    height:76vh;
+    padding-top:0.1em;
+    // display:grid;
+    // grid-template-rows: 1fr 1fr 1fr 5fr;
+    // grid-gap:1rem;
+    h1 {
+        // grid-row: 2/3;
+        font-family: "eurostile", sans-serif;
+        text-align: center;
+        font-size:2.5vw;
+        color:#141c3a;
+        margin:1.8em;
+    }
+    .contactInfo {
+        // grid-row: 3/4;
+        // margin-bottom: 1.8em;
+        display:flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        font-family: 'Quicksand', sans-serif;
+        color:#141c3a;
+        text-align: center;
+        margin-bottom: 0.5em;
+        h2 {
+            font-size: 2.3vw;
+            font-weight: bolder;
+        }
+        p {
+            font-size:2vw;
+        }
+    }
+    .contactForm {
+        // grid-row:4/5;
+        height:60%;
+        display:grid;
+        grid-template-rows: 1fr 3fr 1fr;
+        // grid-gap:1em;
+        .emailSender {
+            display:flex;
+            justify-content: center;
+            input {
+                width:40%;
+                margin:1%;
+                border-radius: 0.2rem;
+                font-size:1.5vw;
+                padding:0.5vw 1vw;
+                border:none;
+                background:#f4f4f4;
+            }
+        }
+        .emailMessage {
+            margin-left:auto;
+            margin-right: auto;
+            display:flex;
+            justify-content: center;
+            width:82%;
+            textarea {
+                width:100%;
+                border-radius: 0.2rem;
+                font-size:1.5vw;
+                padding-left:1vw;
+                border:none;
+                background:#f4f4f4;
+            }
+
+        }
+        .submitBtn{
+            input{
+                background-color: #4a9ead;
+                color: white;
+                height: 5vh;
+                border-radius: 0.5rem;
+                line-height: 0.2;
+                padding: 5px 10px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top:0.5em;
+                width:10%;
+                font-size: 2vw;
+                &:hover {
+                    cursor: pointer;
+                    background-color: white;
+                    color: #4a9ead;
+                    // border: red;
+                }
+            }
+        }
+        
+        // grid-gap:0.3vw;
+    }
+}
+
+/* for the tablet view */
+@media screen and (max-width:800px) {
+    #contact {
+        background-color: transparent;
+        height:76vh;
+        // display:grid;
+        h1 {
+            font-size:2em
+        }
+        .contactInfo {
+            // grid-row: 3/4;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            font-family: 'Quicksand', sans-serif;
+            color:#141c3a;
+            text-align: center;
+            h2 {
+                font-size: 1.2em;
+                font-weight: bolder;
+            }
+            p {
+                font-size:1.2em;
+            }
+        }
+        .contactForm {
+            // grid-row:4/5;
+            height:60%;
+            display:grid;
+            grid-template-rows: 1fr 3fr 1fr;
+            .emailSender {
+                display:flex;
+                justify-content: center;
+                input {
+                    font-size:1.2em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .emailMessage {
+                margin-left:auto;
+                margin-right: auto;
+                display:flex;
+                justify-content: center;
+                width:82%;
+                textarea {
+                    font-size:1.2em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+    
+            }
+            .submitBtn{
+                input{
+                    margin-top:1em;
+                    width:40%;
+                    font-size: 1.2em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            
+            // grid-gap:0.3vw;
+        }
+    }
+}
+
+/* for the mobile view */
+@media screen and (max-width:414px) {
+    #contact {
+        background-color: transparent;
+        height:76vh;
+        // display:grid;
+        // grid-template-rows: 1fr 1fr 1fr 5fr 1fr;
+        // grid-gap:1rem;
+        h1 {
+            font-size:1.5em
+        }
+        .contactInfo {
+            // grid-row: 3/4;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            font-family: 'Quicksand', sans-serif;
+            color:#141c3a;
+            text-align: center;
+            h2 {
+                font-size: 1em;
+                font-weight: bolder;
+            }
+            p {
+                font-size:1em;
+            }
+        }
+        .contactForm {
+            // grid-row:4/5;
+            // height:60%;
+            display:grid;
+            grid-template-rows: 1fr 3fr 1fr;
+            .emailSender {
+                display:flex;
+                justify-content: center;
+                input {
+                    font-size:1em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .emailMessage {
+                margin-left:auto;
+                margin-right: auto;
+                display:flex;
+                justify-content: center;
+                width:82%;
+                textarea {
+                    font-size:1em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+    
+            }
+            .submitBtn{
+                input{
+                    margin-top:1em;
+                    width:40%;
+                    font-size: 1em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            
+            // grid-gap:0.3vw;
+        }
+    }
+}

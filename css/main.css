@@ -1,0 +1,355 @@
+/******************************* general styling*******************************/
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header li a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+
+/******************************* styling for header ******************************/
+header {
+    /* background-color: grey; */
+    height:12vh;
+    position:fixed;
+    margin-top: -12vh;
+    z-index: 10002;
+    width:100%;
+    display:flex;
+    align-items: center;
+    background-color: white;
+}
+
+header ul {
+    display:grid;
+    grid-template-columns: 2fr 6fr 2fr 2fr 1fr 2fr 1fr 2fr 1fr 3fr 2fr;
+    height:100%;
+    width:100%;
+}
+
+header ul li {
+    list-style: none;
+}
+
+/* nav font styling */
+header ul li a{
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:#616464;
+    font-size:2vw;
+}
+
+#logoimg {
+    grid-column: 2/3;
+    /* background-color: lightgray; */
+}
+
+#logoimg img{
+    width:60%;
+}
+
+#profileMenu {
+    grid-column: 4/5;
+    /* background-color: lightcoral; */
+}
+
+#projectMenu {
+    grid-column: 6/7;
+    /* background-color: khaki; */
+}
+
+#contactMenu {
+    grid-column: 8/9;
+    /* background-color: lightgrey; */
+}
+
+#CVmenu {
+    grid-column: 10/11;
+    padding:1.2vw;
+    /* border-radius:1.5rem; */
+
+}
+
+#CVmenu a {
+    background-color:#262727;
+    color:white;
+    /* border-radius:0.2vw; */
+}
+
+
+/******************************* styling for introPage *******************************/
+
+#introPage {
+    /* background-color:lightblue; */
+    height:88vh;
+    margin-top: 12vh;
+}
+
+/******************************* styling for profile page *******************************/
+
+#profile {
+    background-color: lightcoral;
+    display: grid;
+    grid-template-rows: 4fr 4fr;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    height:auto;
+    padding:0;
+}
+
+.profileIntro {
+    background-color: #4a9ead;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* profile Img */
+#proimg {
+    background-color: #4a9ead;
+    display:grid;
+    grid-template-rows: 1fr 3fr 1fr 3fr;
+}
+
+#circle {
+    background-color:transparent;
+    grid-row: 2/3;
+    width:15vw;
+    height:15vw;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #e60012;
+}
+
+#circleIn {
+    width:13vw;
+    height:13vw;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#name {
+    grid-row: 3/4;
+    font-size:3vw;
+    color:#001e61;
+    font-weight: bolder;
+}
+
+#title {
+    grid-row: 4/5;
+    font-size:2.5vw;
+    color:white;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+#title p {
+    grid-row: 1/2;
+}
+
+#title ul {
+    display:flex;
+    justify-content: space-around;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2vh;
+}
+
+#title ul li {
+    list-style: none;
+    background-color: #f32f66;
+    width:5vw;
+    height:3vw
+}
+
+
+
+/* profile text */
+#protext {
+    background-color:#001e61;
+    display: grid;
+    grid-template-rows: 4fr 1fr 2fr 2fr 1fr;
+    height:100%;
+}
+
+#protext div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#protext div img{
+    width: 15%;
+}
+
+#protext h1 {
+    font-size:2.5vw;
+    color: white;
+    font-weight: bolder;
+}
+
+#protext p {
+    font-size:1.8vw;
+    color: white;
+    width:60%;
+    margin-left: auto;
+    margin-right:auto;
+    font-weight: lighter;
+    line-height: 2;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#protext button {
+    background-color: transparent;
+    color:white;
+    font-size:2vw;
+    font-family: 'Quicksand', sans-serif;
+    width:35%;
+    padding:1vw;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#protext button:focus, button:hover {
+    outline:none;
+    cursor: pointer;
+}
+
+
+/* skillsets */
+
+.skillsets{
+    background-color: white;
+    display:grid;
+    grid-template-columns: 1fr 2fr 7fr 1fr;
+    /* height:40vh; */
+}
+
+/* styling for skillbar */
+#skillbar {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 2fr 3fr 3fr 3fr 2fr;
+}
+
+.bar {
+    height:100%;
+    background-color: #b5b5b5;
+    width:12%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+
+#skillbar1 {
+    grid-row: 2/3;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#skillbar1 .bar {
+    background-color: #f32f66;
+}
+
+#skillbar2 {
+    grid-row: 3/4;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#skillbar3 {
+    grid-row: 4/5;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.bartitle {
+    display:flex;
+    align-items: center;
+    color:#35363a;
+}
+
+.bartitle:hover {
+    cursor: pointer;
+}
+
+
+/* styling for skillGrid1 */
+
+.skillGrid {
+    /* background-color: violet; */
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+#skillGrid1 {
+    background-color: lightyellow;
+}
+
+#skillGrid2 {
+    background-color: lightgray;
+}
+
+#skillGrid3 {
+    background-color: lightpink;
+}
+
+#skillGrid4 {
+    background-color: lightgreen;
+}
+
+.skillGrids {
+    display:grid;
+    /* grid-template-columns: 1fr 4fr; */
+}
+
+.skillIcon {
+    width:100%;
+    /* height:4vw; */
+    /* background-color: #4a9ead; */
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+}
+
+.skillIcon img{
+    width:18%;
+    display:block;
+}
+
+/******************************* styling for project page *******************************/
+
+#project {
+    background-color: lightgreen;
+    height:88vh;
+}
+
+footer {
+    height:12vh;
+}
+
+/******************************* styling for contact page *******************************/
+
+#contact {
+    background-color: lightgoldenrodyellow;
+    height:76vh;
+}
+
+footer {
+    height:12vh;
+}
+
+

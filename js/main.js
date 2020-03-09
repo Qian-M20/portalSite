@@ -19,13 +19,13 @@ const header = document.querySelector('header');
 const headerUl = document.querySelector('.headerUl');
 const introPage = document.querySelector('#introPage');
 const exploreMore = document.querySelector('#exploreMore');
-const wrapper = document.querySelector('.wrapper');
 const learnMore = Array.from(document.querySelectorAll('.learnMore'));
-
-const exitBtn = document.querySelector('.exitBtn');
+const exitBtn = Array.from(document.querySelectorAll('.exitBtn'));
 
 const viewMyWork = document.querySelector('#viewMyWork');
+
 const introHeight = $("#introPage").innerHeight() - $(header).innerHeight();
+let theID;
 
 const introPageOptions = {
     rootMargin:"-150px 0px 0px 0px"
@@ -108,15 +108,19 @@ viewMyWork.addEventListener('click', function(){
 
 learnMore.forEach((btn) => {
     btn.addEventListener('click', function(){
-        wrapper.style.display= 'block';    
+        theID= this.id;
+        $(`.wrapper.${theID}`).show(); 
+        $(`.proReviewContent`).addClass('active');       
     });
 })
 
 // when click on the exit button, close the wrapper 
 
-exitBtn.addEventListener('click', function(){
-    wrapper.style.display= 'none';    
-});
-
+exitBtn.forEach((btn) => {
+    btn.addEventListener('click', function(){
+        $(`.wrapper.${theID}`).hide(); 
+        $(`.proReviewContent`).removeClass('active');       
+    });
+})
 
 }

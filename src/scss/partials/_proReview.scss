@@ -1,5 +1,19 @@
+@keyframes proDropDown {
+    0% {
+        opacity:0;
+        transform:scale(0);
+        transform-origin: center;
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+        transform-origin: center;
+    }
+}
+
+
 .wrapper {
-    display:block;
+    display:none;
     width:100vw;
     height:100vh;
     .proReview {
@@ -13,11 +27,17 @@
         z-index: 10002;
         align-items: center;
         .proReviewContent {
-            // position: fixed;
-            // top:1vw;
+            // height:90vh;
+            // display:none;
+            // transform-origin: top;
+            // transform:scale(1,0);
+            // transition:all 500ms ease-in-out 500ms;
             width:700px;
             box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
-            
+
+            &.active {
+                animation: proDropDown 0.9s ease-in-out;
+            }
             overflow: hidden;
             border-radius: 0.5rem;
             display:grid;
@@ -38,7 +58,7 @@
                 h1#title {
                     font-family: "eurostile", sans-serif;
                     margin-bottom: 0.5em;
-                    font-size:2vw;
+                    font-size:2em;
                 }
                 p {
                     margin-bottom: 1em;
@@ -48,7 +68,7 @@
                     display:inline-block;
                     grid-row: 4/5;
                     margin: 0 auto;
-                    font-size: 1.5vw;
+                    font-size: 1.2em;
                     padding: 0.5rem 1rem;
                     border-width: 2px;
                     background-color: transparent;
@@ -101,7 +121,7 @@ ul.slick-dots {
     justify-content: center;
     li {
         display:inline-block;
-        background-color: rgba(255,255,255,0.8);
+        background-color: rgba(235, 159, 159, 0.2);
         margin:10px;
         border-radius:50%;
         width:20px;

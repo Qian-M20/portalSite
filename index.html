@@ -6,14 +6,15 @@
     <meta name="author" content="Qian Ma">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QIAN MA</title>
+    <!-- add logo icon to the tab -->
+    <link rel="shortcut icon" type="image/png" href="img/name_logo.png">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Open+Sans+Condensed:300|Quicksand:300|Roboto|Roboto+Condensed:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Finger+Paint|Fredericka+the+Great|Merienda+One|Nothing+You+Could+Do&display=swap" rel="stylesheet">
 
     <!-- external CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="dist/css/style.css">
-    <!-- slick slider css -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 </head>
 
@@ -33,18 +34,39 @@
     <div class="wrapper halma">
         <div class="proReview">
             <div class="proReviewContent">
-                <div class="imgReview slider">
-                        <div class="trendingImg"><img src="./img/js_game/proReview1.png" alt="game1"></div>
-                        <div class="trendingImg"><img src="./img/js_game/proReview2.png" alt="game2"></div>
-                        <div class="trendingImg"><img src="./img/js_game/proReview3.png" alt="game3"></div>
-                    <!-- <img src="./img/js_game/proReview.png" alt="game"> -->
+                <div class="carousel slide" data-ride="carousel">
+                    <!-- indicators -->
+                    <!-- <ol class="carousel-indicators">
+                        <li id="slider1" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li id="slider2" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li id="slider3" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol> -->
+                    <!-- wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active slider1">
+                            <img class="d-block w-100 trendingImg" src="./img/js_game/proReview1.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item slider2">
+                            <img class="d-block w-100 trendingImg" src="./img/js_game/proReview2.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item slider3">
+                            <img class="d-block w-100 trendingImg" src="./img/js_game/proReview3.png" alt="Third slide">
+                        </div>
+                    </div>
+
+                    <!-- prev and next indicators -->
+                    <a class="carousel-control-prev carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    </a>
+                    <a class="carousel-control-next carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    </a>
+
                 </div>
                 <div class="textReview">
                         <h1 id="title">Halma Board Game</h1>
                         <p id="moreInfor">
-                            The game is developed using React, it is a game for two users, who take turns to move their chesses. By clicking on the chess, the computer will calculat the valid path on the fly. 
+                            The game is developed using React, it is a game for two users, who take turns to move their chesses. By clicking on the chess, the computer will calculate the valid path on the fly. 
                         </p>
-                        <button class="viewSite"><a href="#">View Site</a></button>
+                        <button class="viewSite"><a href="halma/index.html">View Site</a></button>
                         <button class="exitBtn">X</button>
                 </div>
             </div>
@@ -54,25 +76,129 @@
     <div class="wrapper appointment">
         <div class="proReview">
             <div class="proReviewContent">
-                <div class="imgReview slider">
-                        <div class="trendingImg"><img src="./img/appointment_app/proReview1.png" alt="app"></div>
-                        <div class="trendingImg"><img src="./img/appointment_app/proReview2.png" alt="app"></div>
+                <div class="carousel slide" data-ride="carousel">
+                    <!-- indicators -->
+                    <!-- <ol class="carousel-indicators">
+                        <li id="slider1" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li id="slider2" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li id="slider3" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol> -->
+                    <!-- wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active slider1">
+                            <img class="d-block w-100 trendingImg" src="./img/appointment_app/proReview2.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item slider2">
+                            <img class="d-block w-100 trendingImg" src="./img/appointment_app/proReview2.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item slider3">
+                            <img class="d-block w-100 trendingImg" src="./img/appointment_app/proReview3.png" alt="Second slide">
+                        </div>
+                    </div>
 
-                    <!-- <img src="./img/js_game/proReview.png" alt="game"> -->
+                    <!-- prev and next indicators -->
+                    <a class="carousel-control-prev carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    </a>
+                    <a class="carousel-control-next carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    </a>
+
                 </div>
                 <div class="textReview">
-                        <h1 id="title">Appointment Scheduling App</h1>
+                        <h1 id="title">Family Eatery App</h1>
                         <p id="moreInfor">
-                            The app is developed using React, it displays the current week of record. Once the intiator registers an appointment, the recipient can confirm, reschedule or cancle the appoointment. 
+                            The app is built using HTML, CSS, jQuery and GSAP, it displays three restaurant options for users to choose, and every restaurant consists of a homepage, a menu page and a reservation page. 
                         </p>
-                        <button class="viewSite"><a href="#">View Site</a></button>
+                        <button class="viewSite"><a href="reactApp/index.html">View Site</a></button>
                         <button class="exitBtn">X</button>
                 </div>
             </div>
         </div>
     </div>
 
-    
+    <div class="wrapper eatery">
+        <div class="proReview">
+            <div class="proReviewContent">
+                <div class="carousel slide" data-ride="carousel">
+                    <!-- indicators -->
+                    <!-- <ol class="carousel-indicators">
+                        <li id="slider1" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li id="slider2" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li id="slider3" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol> -->
+                    <!-- wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active slider1">
+                            <img class="d-block w-100 trendingImg" src="./img/restaurant/proReview1.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item slider2">
+                            <img class="d-block w-100 trendingImg" src="./img/restaurant/proReview2.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item slider3">
+                            <img class="d-block w-100 trendingImg" src="./img/restaurant/proReview2.png" alt="Second slide">
+                        </div>
+                    </div>
+
+                    <!-- prev and next indicators -->
+                    <a class="carousel-control-prev carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    </a>
+                    <a class="carousel-control-next carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    </a>
+
+                </div>
+                <div class="textReview">
+                        <h1 id="title">Family Eatery App</h1>
+                        <p id="moreInfor">
+                            The app is built using HTML, CSS, jQuery and GSAP, it displays three restaurant options for users to choose, and every restaurant consists of a homepage, a menu page and a reservation page. 
+                        </p>
+                        <button class="viewSite"><a href="webApp/iframePage.html">View Site</a></button>
+                        <button class="exitBtn">X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper baking">
+        <div class="proReview">
+            <div class="proReviewContent">
+                <div class="carousel slide" data-ride="carousel">
+                    <!-- indicators -->
+                    <!-- <ol class="carousel-indicators">
+                        <li id="slider1" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li id="slider2" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li id="slider3" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol> -->
+                    <!-- wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active slider1">
+                            <img class="d-block w-100 trendingImg" src="./img/responsive_site/proReview1.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item slider2">
+                            <img class="d-block w-100 trendingImg" src="./img/responsive_site/proReview2.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item slider3">
+                            <img class="d-block w-100 trendingImg" src="./img/responsive_site/proReview2.png" alt="Second slide">
+                        </div>
+                    </div>
+
+                    <!-- prev and next indicators -->
+                    <a class="carousel-control-prev carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    </a>
+                    <a class="carousel-control-next carousel-indicators" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    </a>
+
+                </div>
+                <div class="textReview">
+                        <h1 id="title">Family Eatery App</h1>
+                        <p id="moreInfor">
+                            The app is built using HTML, CSS, jQuery and GSAP, it displays three restaurant options for users to choose, and every restaurant consists of a homepage, a menu page and a reservation page. 
+                        </p>
+                        <button class="viewSite"><a href="responsiveSite/home.html">View Site</a></button>
+                        <button class="exitBtn">X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
 
     <section id="introPage">
         <p id="greeting">Hello,I'm <span class="nameTag"> Qian Ma.</span></p>
@@ -103,12 +229,9 @@
                 <div class="moreStory"><button id="viewMyWork"> View My Work↓ </button></div>
             </div>
         </div>
-        <div class="skillsets">
-
-            <!-- <div></div> -->
+        <!-- <div class="skillsets">
             <div class="skillGroup">
                 <div class="skillGrid skillGridDevelop">
-                    <!-- <div class="developerIcon"><img src="./img/developer.svg" alt="developerIcon" ></div>    -->
                     <h1>Developer</h1>
                     <p class="genState"> I have great passion for coding. Write clean, understandable and maintanable code.</p>
                     <h2>Languages That I Speak</h2>    
@@ -119,7 +242,6 @@
                 </div>
 
                 <div class="skillGrid skillGridDesign">
-                    <!-- <div class="designerIcon"><img src="./img/designer.svg" alt="designerIcon" ></div> -->
                     <h1>Designer</h1>
                     <p class="genState"> I value simple content structure, clean design patterns, and thoughtful interactions.</p>
                     <h2>Skillsets That I Own</h2>    
@@ -127,7 +249,6 @@
                     <p> Photoshop, Illustrator, AdobeXD</p>
                 </div>
                 <div class="skillGrid skillGridTeam">
-                    <!-- <div class="collaboratorIcon"><img src="./img/collaborator.svg" alt="collaboratorIcon" ></div> -->
                     <h1>Collaborator</h1>
                     <p class="genState">I appreciate team working opportunities, enjoy interesting discussion with teammates.</p>
                     <h2>Experience That I Have</h2> 
@@ -136,8 +257,7 @@
                     
                 </div>
             </div>
-            <!-- <div></div> -->
-        </div>
+        </div> -->
     </section>
     <section id="project">
         <div></div>
@@ -290,9 +410,11 @@
     <!-- link to js files -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script src="js/main.js"></script>
-
+    
 
 </body>
 

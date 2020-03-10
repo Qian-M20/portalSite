@@ -13,8 +13,10 @@
         grid-template-columns: 1fr 1fr;
         #proimg {
             background-color: #4a9ead;
+            padding-top:2em;
+            padding-bottom:2em;
             display:grid;
-            grid-template-rows: 1fr 3fr 1fr 2fr 1fr;
+            // grid-template-rows: 1fr 3fr 1fr 2fr 1fr;
             #circle {
                 background-color:transparent;
                 grid-row: 2/3;
@@ -71,6 +73,8 @@
             }
         }
         #protext {
+            padding-top:2em;
+            padding-bottom:2em;
             background-color:#141c3a;
             display: grid;
             grid-template-rows: 1fr 2fr 1fr 2fr 2fr 1fr;

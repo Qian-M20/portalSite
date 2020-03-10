@@ -82,7 +82,7 @@ header {
                     height:4px;
                     background-color: #4a9ead;
                     display:block;
-                    margin-top:18px;
+                    margin-top:1.7vw;
                     border-radius: 2rem;
                     position: absolute;
                     transform-origin: left;
@@ -211,6 +211,7 @@ header {
                     &::after {
                         content:"";
                         width:100%;
+                        display:none;
                     }
                 }
                 &#logoimg{

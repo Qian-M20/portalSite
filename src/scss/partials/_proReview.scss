@@ -2,12 +2,12 @@
     0% {
         opacity:0;
         transform:scale(0);
-        transform-origin: center;
+        transform-origin: top;
     }
     100%{
         opacity:1;
         transform:scale(1);
-        transform-origin: center;
+        transform-origin: top;
     }
 }
 
@@ -124,6 +124,11 @@
     }
 }
 
+
+.eaterySlide {
+    display:block;
+}
+
 // styling for slider 
 .carousel-item {
     display:none;
@@ -166,9 +171,20 @@
     .wrapper {
         .proReview{
             .proReviewContent {
-                width:100vw;
+                width:90vw;
                 .carousel {
                     width:100%;
+                    &.eaterySlide {
+                        .carousel-inner {
+                            width:100%;
+                            .active.slider1 {
+                                display:block;
+                                img {
+                                    width:100%;
+                                }
+                            }
+                        }
+                    }
                     .carousel-inner {
                         width:100%;
                         .carousel-item{

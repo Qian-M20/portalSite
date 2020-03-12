@@ -1,6 +1,5 @@
 window.onload = function(){
 
-$("body, html").animate({scrollTop: 0}, 300, "easeInSine");
 // changing navigation style on scroll
 const header = document.querySelector('header');
 const headerUl = document.querySelector('.headerUl');

@@ -12,7 +12,7 @@
     font-family: 'Quicksand', sans-serif;
     p { 
         color:white;
-        font-size:4vw;
+        font-size:3vw;
         span {
             color: #f32f66;
             font-weight: bolder;
@@ -26,8 +26,23 @@
         font-size:2vw;
         margin:1em 40vw;
         padding: 1vw 1vw;
+        transition: background-color 200ms ease-in-out;
+        span {
+            display:inline-block;
+            transform:rotate(0);
+            transition: transform 200ms ease-in-out;
+
+        }
         &:hover {
             cursor: pointer;
+            background-color: #4a9ead;
+            border:3px solid #4a9ead;
+            transition: background-color 200ms ease-in-out;
+            span {
+                display:inline-block;
+                transform:rotate(90deg);
+                transition: transform 200ms ease-in-out;
+            }
         }
         &:focus {
             outline: none;
@@ -43,7 +58,7 @@
         }
         button {
             font-size:1.8em;
-            margin:1em 20vw;
+            margin:1em 32vw;
         }
     }
 }
@@ -52,11 +67,13 @@
 @media screen and (max-width:414px) {
     #introPage {
         p{
-            font-size:2em;
+            font-size:1.5em;
         }
         button {
             font-size:1.2em;
-            margin:1em 20vw;
+            margin:1em 25vw;
+            padding: 2vw 1vw;
+
         }
     }
 }

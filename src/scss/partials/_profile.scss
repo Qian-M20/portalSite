@@ -1,5 +1,12 @@
 /******************************* styling for profile page *******************************/
-
+@keyframes moving {
+    0% {
+        transform:scale(0.3);
+    }
+    100%{
+        transform:scale(1.2);
+    }
+}
 #profile {
     display: grid;
     // grid-template-rows: 4fr 4fr;
@@ -7,19 +14,28 @@
     text-align: center;
     height:auto;
     padding:0;
-    .profileIntro {
-        background-color: #4a9ead;
+    background-color:#f5f5f5;
+    h1 {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size:2.5vw;
+        color:#141c3a;
+        margin:1.8em;
+    }
+    .profileIntro {        
+        margin-bottom:2em;
         display:grid;
         grid-template-columns: 1fr 1fr;
         #proimg {
-            background-color: #4a9ead;
-            padding-top:2em;
+            // background-color: #4a9ead;
+            background-color:transparent;
+
+            // padding-top:2em;
             padding-bottom:2em;
             display:grid;
             // grid-template-rows: 1fr 3fr 1fr 2fr 1fr;
             #circle {
                 background-color:transparent;
-                grid-row: 2/3;
                 width:15vw;
                 height:15vw;
                 margin-left:auto;
@@ -37,21 +53,21 @@
                 }
             }
             #name {
-                grid-row: 3/4;
                 font-size:3vw;
-                color:#001e61;
+                color:#616161;
                 font-weight: bolder;
                 line-height:1.5;
-                font-family: "eurostile", sans-serif;
+                font-family: 'Lato', sans-serif;
 
             }
             #title {
-                grid-row: 4/5;
                 font-size:2.5vw;
-                color:white;
+                // color:white;
+                color:#4a9ead;
+                font-weight: bolder;
                 display:grid;
                 grid-template-rows: 1fr 2fr;
-                font-family: "eurostile", sans-serif;
+                font-family: 'Lato', sans-serif;
 
                 p {
                     grid-row: 1/2;
@@ -73,53 +89,64 @@
             }
         }
         #protext {
-            padding-top:2em;
+            // padding-top:2em;
             padding-bottom:2em;
-            background-color:#141c3a;
+            // background-color:#141c3a;
+            background-color:transparent;
             display: grid;
-            grid-template-rows: 1fr 2fr 1fr 2fr 2fr 1fr;
+            // grid-template-rows: 1fr 2fr 1fr 2fr 2fr 1fr;
             height:100%;
-            >div {
-                grid-row: 2/3;
+            div.letterHeading {
                 display:flex;
+                flex-direction: column;
                 justify-content: center;
-                align-items: flex-start;
-                img{
-                    width: 15%;
+                align-items: center;
+                width:100%;
+                height:15vw;
+                .fa-rocket{
+                    font-size:8vw;
+                    color: #f32f66;
                 }
             }
-            h1 {
-                grid-row: 3/4;
+            h {
                 font-size:2.5vw;
                 color: white;
+                color:#4a9ead;
                 font-weight: bolder;
-                font-family: "eurostile", sans-serif;
+                font-family: 'Lato', sans-serif;
+                padding:0.5em;
 
             }
             p {
-                grid-row: 4/5;
                 font-size:1.8vw;
                 color: white;
+                color:#616161;
+                font-weight: thiner;
                 width:60%;
                 margin-left: auto;
                 margin-right:auto;
-                font-weight: lighter;
                 line-height: 2;
-                font-family: 'Quicksand', sans-serif;
+                font-family: 'Lato', sans-serif;
             }
             .moreStory {
-                grid-row: 5/6;
                 display:flex;
                 align-items: center;
                 button {
                     background-color: transparent;
                     color:white;
+                    color:#f32f66;
                     font-size:2vw;
-                    font-family: 'Quicksand', sans-serif;
+                    font-family: 'Lato', sans-serif;
                     width:35%;
                     padding:1vw;
                     margin-left: auto;
                     margin-right:auto;
+                    margin-top:2vh;
+                    border:2px solid #f32f66;
+                    span {
+                        display:inline-block;
+                        animation: moving 1000ms ease-in-out alternate infinite;
+                    }
                     &:focus,&:hover {
                         outline:none;
                         cursor: pointer;
@@ -149,7 +176,7 @@
                h1 {
                 color:#141c3a;
                 font-size:2vw;
-                font-family: "eurostile", sans-serif;
+                font-family: 'Lato', sans-serif;
                 // height:3vh;
                }
                h2 {
@@ -210,40 +237,15 @@
 
 /* for the tablet view */
 @media screen and (max-width:800px) {
-    
 
-    #profile .skillsets {
+    
+    #profile{
+        h1 {
+            margin: 1.8em;
+            font-size: 2em;
+        }
         background-color: white;
         padding:0 0.5em;
-        // display:grid;
-        // grid-template-columns: 1fr 10fr 1fr;
-        .skillGroup {
-            margin-top: 0;
-            // height:60vh;
-            background-color:white;
-            border-radius: 1rem;
-            // display:flex;
-            // flex-direction: column;
-            .skillGrid {
-                border: 1px solid #E6ECF8;
-                padding:1em 0.5em;
-                display:grid;
-                grid-template-rows: 1fr 1fr 1fr;
-               h1 {
-                color:#141c3a;
-                font-size:1.5em;
-                font-family: "eurostile", sans-serif;
-                // height:3vh;
-               }
-               h2 {
-                display:none;
-               }
-               .genState{
-                   display:none;
-               }
-            }
-            
-        }
 
     }
 }
@@ -251,8 +253,12 @@
 /* for the mobile view */
 @media screen and (max-width:414px) {
     #profile {
+        h1 {
+            margin: 1.8em;
+            font-size: 1.5em;
+        }
         .profileIntro {
-            background-color: #4a9ead;
+            // background-color: #4a9ead;
             display:grid;
             grid-template-columns: 1fr;
             #proimg {
@@ -282,9 +288,9 @@
                 }
             }
             #protext {
-                background-color:#141c3a;
-                display: grid;
-                grid-template-rows: 1fr 4fr 2fr 2fr 2fr 1fr;
+                // background-color:#141c3a;
+                // display: grid;
+                // grid-template-rows: 1fr 4fr 2fr 2fr 2fr 1fr;
                 height:100%;
                 >div {
                     grid-row: 2/3;
@@ -296,37 +302,21 @@
                     }
                 }
                 h1 {
-                    grid-row: 3/4;
                     font-size:1.8em;
-                    color: white;
-                    font-weight: bolder;
-                    font-family: "eurostile", sans-serif;
     
                 }
-                p {
-                    grid-row: 4/5;
+                p {    
                     font-size:1em;
-                    color: white;
-                    width:60%;
-                    margin-left: auto;
-                    margin-right:auto;
-                    font-weight: lighter;
                     line-height: 2;
-                    font-family: 'Quicksand', sans-serif;
                 }
                 .moreStory {
                     grid-row: 5/6;
                     display:flex;
                     align-items: center;
                     button {
-                        background-color: transparent;
-                        color:white;
+                        
                         font-size:1.2em;
-                        font-family: 'Quicksand', sans-serif;
-                        width:50%;
-                        padding:1vw;
-                        margin-left: auto;
-                        margin-right:auto;
+                        
                         &:focus,&:hover {
                             outline:none;
                             cursor: pointer;
@@ -336,40 +326,6 @@
                 
             }
 
-        }
-        .skillsets {
-            background-color: white;
-            padding: 0 0.5em;
-            // display:grid;
-            // grid-template-columns: 1fr 10fr 1fr;
-            .skillGroup {
-                margin-top: 0;
-                // height:60vh;
-                background-color:white;
-                border-radius: 1rem;
-                display:flex;
-                flex-direction: column;
-                .skillGrid {
-                    border: 1px solid #E6ECF8;
-                    padding:3vw;
-                    display:grid;
-                    grid-template-rows: 1fr 1fr 1fr;
-                   h1 {
-                    color:#141c3a;
-                    font-size:1.5em;
-                    font-family: "eurostile", sans-serif;
-                    // height:3vh;
-                   }
-                   h2 {
-                    display:none;
-                   }
-                   .genState{
-                       display:none;
-                   }
-                }
-                
-            }
-    
         }
         
     }

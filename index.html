@@ -9,9 +9,11 @@
     <!-- add logo icon to the tab -->
     <link rel="shortcut icon" type="image/png" href="img/name_logo.png">
     <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Open+Sans+Condensed:300|Quicksand:300|Roboto|Roboto+Condensed:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Finger+Paint|Fredericka+the+Great|Merienda+One|Nothing+You+Could+Do&display=swap" rel="stylesheet">
-
+    <!-- link to fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <!-- external CSS -->
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="dist/css/style.css">
@@ -24,7 +26,7 @@
         <label for="toggle" class="hamburger">&#9776;</label>
         <ul class="headerUl">
             <li id="logoimg"><a href="#introPage"><img src="img/name_logo.svg" alt="logo"></a></li>
-            <li id="profileMenu"><a href="#profile" class="menu">Profile</a></li>
+            <li id="profileMenu"><a href="#profile" class="menu">About</a></li>
             <li id="projectMenu"><a href="#project" class="menu">Project</a></li>
             <li id="contactMenu"><a href="#contact" class="menu">Contact</a></li>
             <li id="CVmenu"><a href="#home">Download CV</a></li>
@@ -192,10 +194,11 @@
     <section id="introPage">
         <p id="greeting">Hello,I'm <span class="nameTag"> Qian Ma.</span></p>
         <p id="greetingLine">I'm a front-end web developer.</p>
-        <button id="exploreMore">Explore More ↓</button>
+        <button id="exploreMore">Explore More <span> ⟶</span></button>
         
     </section>
     <section id="profile">
+        <h1>ABOUT ME</h1>
         <div class="profileIntro">
             <div id="proimg">
                 <div id="circle">
@@ -212,10 +215,12 @@
                 </div>
             </div>
             <div id="protext">
-                <div><img src="img/letter.svg" alt="letter"></div>
-                <h1>Life-Long Learner</h1>
+                <div class="letterHeading">
+                    <i class="fas fa-rocket"></i>
+                    <h>Life-Long Learner</h>
+                </div>
                 <p>I am a passionate learner in the Web Development Field!</p>
-                <div class="moreStory"><button id="viewMyWork"> View My Work↓ </button></div>
+                <div class="moreStory"><button id="viewMyWork"> More Story <span> ⟶</span> </button></div>
             </div>
         </div>
         <!-- <div class="skillsets">
@@ -250,7 +255,7 @@
     </section>
     <section id="project">
         <div></div>
-        <h1>My Recent Projects</h1>
+        <h1>RECENT PROJECTS</h1>
         <div class="projectsGroup">
             <!-- the crop size for cover pic is 304 209 -->
             <div class="project">
@@ -369,7 +374,7 @@
     </section>
     <section id="contact">
         <div></div>
-        <h1>Contact Me</h1>
+        <h1>CONTACT ME</h1>
         <div class="contactInfo">
             <div class="email">
                 <h2>Email</h2>

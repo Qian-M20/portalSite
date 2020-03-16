@@ -83,7 +83,7 @@ header {
                     height:4px;
                     background-color: #4a9ead;
                     display:block;
-                    margin-top:1.7vw;
+                    margin-top:1em;
                     border-radius: 2rem;
                     position: absolute;
                     transform-origin: left;
@@ -170,7 +170,11 @@ header {
             display:grid;
             align-content: center;
             // background-color: #616161;
+            // input {
+            //     display:block;
+            // }
             .hamburger {
+                display:block;
                 font-size: 2.5em;
                 display:flex;
                 align-items: center;
@@ -185,23 +189,52 @@ header {
         
         
 
-        .headerUl {
-            display:none;
+        .headerUl.dropDown {
+            display:block;
             opacity: 0;
-            transition: all 250ms ease-in-out; 
             height: 0;
-            // margin-top:13px;
+            transition: all 500ms ease-in-out; 
+            overflow:hidden;
+            li {
+                opacity: 1;
+                transition: all 350ms  ease-in-out 250ms; 
+                margin:0;
+                background-color: rgba(255,255,255,0.9);
+                padding:0.5em 2.5em;
+                display:flex;
+                justify-content: flex-start;
+                &#CVmenu {
+                    padding: 0.5em 2.5em;
+                }
+                a{
+                    &::after {
+                        content:"";
+                        width:100%;
+                        display:none;
+                    }
+                }
+                &#logoimg{
+                    display:none;
+                }
+            }
         }
 
+        // .headerUl.slideUp {
+        //     display:block;
+        //     opacity: 0;
+        //     height: 0;
+
+        //     transition: all 500ms ease-in-out;  
+        // }
+
         #toggle:checked ~ .headerUl.dropDown {
-            /* transform: scale(1); */
+            position:absolute;
             display:block;
             opacity:1;
-            // height:20vh;
-            transition: opacity 500ms ease-in-out;  
-            // position: absolute;
-            margin-top:0;
-            
+            height:auto;
+            transform-origin: top;
+            transition: all 500ms ease-in-out;  
+            top:12vh;
             // margin-top:1em;
             li {
                 opacity: 1;

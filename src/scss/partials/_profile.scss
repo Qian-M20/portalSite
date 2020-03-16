@@ -27,13 +27,8 @@
         display:grid;
         grid-template-columns: 1fr 1fr;
         #proimg {
-            // background-color: #4a9ead;
             background-color:transparent;
-
-            // padding-top:2em;
             padding-bottom:2em;
-            display:grid;
-            // grid-template-rows: 1fr 3fr 1fr 2fr 1fr;
             #circle {
                 background-color:transparent;
                 width:15vw;
@@ -58,7 +53,6 @@
                 font-weight: bolder;
                 line-height:1.5;
                 font-family: 'Lato', sans-serif;
-
             }
             #title {
                 font-size:2.5vw;
@@ -68,10 +62,6 @@
                 display:grid;
                 grid-template-rows: 1fr 2fr;
                 font-family: 'Lato', sans-serif;
-
-                p {
-                    grid-row: 1/2;
-                }
                 ul {
                     display:flex;
                     justify-content: space-around;
@@ -89,13 +79,8 @@
             }
         }
         #protext {
-            // padding-top:2em;
             padding-bottom:2em;
-            // background-color:#141c3a;
             background-color:transparent;
-            display: grid;
-            // grid-template-rows: 1fr 2fr 1fr 2fr 2fr 1fr;
-            height:100%;
             div.letterHeading {
                 display:flex;
                 flex-direction: column;
@@ -107,16 +92,16 @@
                     font-size:8vw;
                     color: #f32f66;
                 }
+                h {
+                    font-size:2.5vw;
+                    color: white;
+                    color:#4a9ead;
+                    font-weight: bolder;
+                    font-family: 'Lato', sans-serif;
+                    padding:0.5em;
+                }
             }
-            h {
-                font-size:2.5vw;
-                color: white;
-                color:#4a9ead;
-                font-weight: bolder;
-                font-family: 'Lato', sans-serif;
-                padding:0.5em;
-
-            }
+            
             p {
                 font-size:1.8vw;
                 color: white;
@@ -156,82 +141,6 @@
             
         }
     }
-    .skillsets{
-        background-color: transparent;
-        display:grid;
-        padding:0 7rem;
-        grid-template-columns: 1fr;
-        .skillGroup {
-            // margin-top: -10vw;
-            // height:60vh;
-            background-color:white;
-            border-radius: 1rem;
-            display:grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            .skillGrid {
-                border: 1px solid #E6ECF8;
-                padding:3vw 1vw;
-                display:grid;
-                // grid-template-rows: auto auto 2fr auto 1fr;
-               h1 {
-                color:#141c3a;
-                font-size:2vw;
-                font-family: 'Lato', sans-serif;
-                // height:3vh;
-               }
-               h2 {
-                font-size:1.8vw;
-               }
-                &.skillGridDevelop {
-                    border-top-left-radius:1rem;
-                    display:grid;
-                    grid-template-columns: 1fr;
-                    grid-gap:25px;
-                    
-                    .developerIcon {
-                        width:30%;
-                        margin-left:auto;
-                        margin-right:auto;
-                        img {
-                            width:100%;
-                        }
-                    }
-                }
-                &.skillGridDesign {
-                    display:grid;
-                    grid-template-columns: 1fr;
-                    grid-gap:25px;
-                    .designerIcon {
-                        width:30%;
-                        margin-left:auto;
-                        margin-right:auto;
-                        img {
-                            width:100%;
-                        }
-                    }
-                }
-                &.skillGridTeam {
-                    border-top-right-radius:1rem;
-                    display:grid;
-                    grid-template-columns: 1fr;
-                    grid-gap:25px;
-                    .collaboratorIcon {
-                        width:30%;
-                        margin-left:auto;
-                        margin-right:auto;
-                        img {
-                            width:100%;
-                        }
-                    }
-                }
-
-                grid-gap:2vw;
-
-            }
-            
-        }
-
-    }
 }
 
 
@@ -244,9 +153,6 @@
             margin: 1.8em;
             font-size: 2em;
         }
-        background-color: white;
-        padding:0 0.5em;
-
     }
 }
 
@@ -275,10 +181,6 @@
                 }
                 #title {
                     font-size:1.8em;
-    
-                    p {
-                        grid-row: 1/2;
-                    }
                     ul {
                         li {   
                             width:10vw;
@@ -292,31 +194,29 @@
                 // display: grid;
                 // grid-template-rows: 1fr 4fr 2fr 2fr 2fr 1fr;
                 height:100%;
-                >div {
-                    grid-row: 2/3;
-                    display:flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                    img{
-                        width: 25%;
+                div.letterHeading {
+                    // display:flex;
+                    // justify-content: center;
+                    // align-items: flex-start;
+                    height:28vw;
+                    width:100%;
+                    .fa-rocket {
+                        font-size: 4em;
                     }
-                }
-                h1 {
-                    font-size:1.8em;
-    
+                    h {
+                        font-size: 1.8em;
+                    }
                 }
                 p {    
                     font-size:1em;
                     line-height: 2;
                 }
                 .moreStory {
-                    grid-row: 5/6;
                     display:flex;
                     align-items: center;
                     button {
-                        
                         font-size:1.2em;
-                        
+                        width:45%;
                         &:focus,&:hover {
                             outline:none;
                             cursor: pointer;

@@ -53,11 +53,11 @@ window.onload = function(){
 
     });
 
-    /**************when scroll down to a section, the corresponsding nav menu should be active *******************/
+    /**************when scroll down to a section, do the following animation *******************/
     $(window).scroll(function(){
             
         var topContentPos =$(window).scrollTop()+navOffset;
-        
+        // the corresponding nav section should be active
         $("section").each(function(){
             var secTopPos = $(this).offset().top-30;
             var secBotPos = secTopPos + $(this).innerHeight()-30;
@@ -74,6 +74,18 @@ window.onload = function(){
                 // console.log('class removed');
             }
         });
+
+        // the corresponding section should be animated on
+        $(".reveal-ele").each(function(){
+            var botEle =$(this).offset().top + $(this).innerHeight();
+            var botWin = topContentPos+$(window).height()+30;
+            if(botEle<botWin)
+            {
+                $(this).addClass('animated');
+            }
+            
+        });
+
     });
 
     // /**************when click on the nav menu, the header ul will disappear *******************/

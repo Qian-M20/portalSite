@@ -1,12 +1,35 @@
 /******************************* styling for profile page *******************************/
 @keyframes moving {
     0% {
-        transform:scale(0.3);
+        transform:scale(0.5);
     }
     100%{
         transform:scale(1.2);
     }
 }
+
+@keyframes slideInLeft {
+    0% {
+        opacity:0;
+        transform:translateX(-300px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity:0;
+        transform:translateX(300px);
+    }
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
 #profile {
     display: grid;
     // grid-template-rows: 4fr 4fr;
@@ -21,6 +44,10 @@
         font-size:2.5vw;
         color:#141c3a;
         margin:1.8em;
+        opacity:0;
+        &.animated{
+            animation: slideInLeft 0.5s ease forwards;
+        }
     }
     .profileIntro {        
         margin-bottom:2em;
@@ -29,6 +56,10 @@
         #proimg {
             background-color:transparent;
             padding-bottom:2em;
+            opacity:0;
+            &.animated{
+                animation: slideInLeft 0.75s ease forwards 0.15s;
+            }
             #circle {
                 background-color:transparent;
                 width:15vw;
@@ -81,6 +112,10 @@
         #protext {
             padding-bottom:2em;
             background-color:transparent;
+            opacity:0; 
+            &.animated{
+                animation: slideInRight 0.75s ease forwards 0.15s;
+            }
             div.letterHeading {
                 display:flex;
                 flex-direction: column;
@@ -95,7 +130,7 @@
                 h {
                     font-size:2.5vw;
                     color: white;
-                    color:#4a9ead;
+                    color:#616161;
                     font-weight: bolder;
                     font-family: 'Lato', sans-serif;
                     padding:0.5em;
@@ -106,7 +141,7 @@
                 font-size:1.8vw;
                 color: white;
                 color:#616161;
-                font-weight: thiner;
+                font-weight:normal;
                 width:60%;
                 margin-left: auto;
                 margin-right:auto;
@@ -128,17 +163,74 @@
                     margin-right:auto;
                     margin-top:2vh;
                     border:2px solid #f32f66;
+                    transition:all 200ms ease-in-out;
                     span {
                         display:inline-block;
-                        animation: moving 1000ms ease-in-out alternate infinite;
+                        animation: moving 800ms ease-in-out alternate infinite;
                     }
                     &:focus,&:hover {
                         outline:none;
                         cursor: pointer;
+                        border:2px solid white;
+                        background-color:#f32f66;
+                        color:white;
+                        transition:all 200ms ease-in-out;
+
                     }
                 }
             }
+        }
+    }
+    .skillsets {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 2em;
+        padding-left: 6vw;
+        padding-right: 6vw;
+        grid-gap:8vw;
+        .skillGrid {
+            display:grid;
+            grid-gap: 1em;
+            &.skillGridDevelop {
+                opacity:0;
+                &.animated{
+                    animation: slideInLeft 0.75s ease forwards 0.2s;
+                }
+            }
+            &.skillGridDesign {
+                opacity:0;
+                &.animated{
+                    animation: slideInLeft 0.75s ease forwards 0.25s;
+                }
+            }
+            &.skillGridTeam {
+                opacity:0;
+                &.animated{
+                    animation: slideInLeft 0.75s ease forwards 0.3s;
+                }
+            }
             
+            h1 {
+                font-size:2vw;
+                color:#616161;
+                margin-bottom:0;
+            }
+            .skillIcon{
+                // background-color:#04C2C9;
+                // width:8vw;
+                // height:8vw;
+                margin-left:auto;
+                margin-right: auto;
+                // border-radius: 50%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    // width:100%;
+                    font-size:5vw;
+                }
+                
+            }
         }
     }
 }
@@ -153,7 +245,23 @@
             margin: 1.8em;
             font-size: 2em;
         }
+        .skillsets {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 2em;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            grid-gap:2em;
+            h1 {
+                color:#616161;
+                font-size:3vw;
+            }
+            p {
+                font-size:2vw;
+            }
+        }
     }
+    
 }
 
 /* for the mobile view */
@@ -226,6 +334,28 @@
                 
             }
 
+        }
+        .skillsets {
+            display:grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 2em;
+            padding-left: 6vw;
+            padding-right: 6vw;
+            grid-gap:8vw;
+            .skillGrid {
+                h1 {
+                    font-size:1.5em;
+                }
+                .skillIcon{
+                    i {
+                        font-size:2.5em;
+                    }
+                }
+                p{
+                    font-size:1.2em;
+                }
+            }
+            
         }
         
     }

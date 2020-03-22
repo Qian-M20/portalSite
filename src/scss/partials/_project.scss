@@ -79,6 +79,13 @@
                 }
 
             }
+            &.project8 {
+                opacity:0;
+                &.animated{
+                    animation: slideUp 0.75s ease forwards 0.4s;
+                }
+
+            }
             figure {
                 position: relative;
                 // opacity:0;

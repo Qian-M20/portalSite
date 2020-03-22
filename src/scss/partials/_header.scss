@@ -21,7 +21,7 @@ body {
 
 header {
     display:none;
-    height:12vh;
+    height:8vh;
     width:100%;
     display:flex;
     align-items: center;
@@ -60,7 +60,7 @@ header {
                 font-weight:bolder;
                 font-family: 'Quicksand', sans-serif;
                 color:#141c3a;
-                font-size:2vw;
+                font-size:1.5vw;
                 display:flex;
                 justify-content: center;
                 align-items: center;
@@ -79,11 +79,11 @@ header {
                 }
                 &::after {
                     content:"";
-                    width:80%;
+                    width:60%;
                     height:4px;
                     background-color: #4a9ead;
                     display:block;
-                    margin-top:1em;
+                    margin-top:0.8em;
                     border-radius: 2rem;
                     position: absolute;
                     transform-origin: left;
@@ -103,7 +103,7 @@ header {
                         }
                     }
                     img{
-                        width:25%;
+                        width:15%;
                     }
                 }
             }
@@ -146,13 +146,19 @@ header {
             li {
                 opacity:1;
                 a{
-                    font-size:1.5em;
+                    font-size:1.2em;
+                    &::after {
+                        content:"";
+                        width:80%;
+                        height:4px;
+                    }
                 }
+                
                 &#logoimg{
                     grid-column: 2/3;
                     a{
                         img{
-                            width:60%;
+                            width:40%;
                         }
                     }
                     

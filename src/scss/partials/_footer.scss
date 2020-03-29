@@ -1,6 +1,27 @@
 footer {
-    height:12vh;
+
+    ul {
+        display:flex;
+        justify-content: space-evenly;
+        width:20%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:2vh;
+        margin-bottom:2vh;
+
+        li {
+            list-style: none;
+            // background-color: #f32f66;
+            width:3vw;
+            height:3vw
+        }
+    }
+    p {
+        float: left;
+    }
+    height:16vh;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
@@ -8,3 +29,16 @@ footer {
     background-color:#262626;
     color:rgb(211,211,211);
 }
+
+@media screen and (max-width:800px) {
+    footer {
+        ul {
+            width:60%;
+            li {
+                width:3em;
+                height:3em;
+            }
+        }
+    }
+}
+

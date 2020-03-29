@@ -5,6 +5,7 @@ window.onload = function(){
     const headerUl = document.querySelector('.headerUl');
     const introPage = document.querySelector('#introPage');
     const exploreMore = document.querySelector('#exploreMore');
+    const emailLink = document.querySelector('.emailLink');
     const learnMore = Array.from(document.querySelectorAll('.learnMore'));
     const exitBtn = Array.from(document.querySelectorAll('.exitBtn'));
 
@@ -108,6 +109,16 @@ window.onload = function(){
 
         $("body, html").animate({scrollTop: idPosNav}, 500, "easeOutExpo");
     });
+
+    emailLink.addEventListener('click', function(){
+        // finds the position of selected link/ID
+        var idPosNav = $('#contact').offset().top - navOffset;
+
+        $("body, html").animate({scrollTop: idPosNav}, 500, "easeOutExpo");
+    });
+
+
+
 
     /**************** when click on learnmore button, display the wrapper ****************/
 

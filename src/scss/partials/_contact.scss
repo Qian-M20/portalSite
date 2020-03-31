@@ -60,76 +60,77 @@
         margin: 1.3em auto;
         // grid-row:4/5;
         // height:60%;
-        width:40%;
+        width:50%;
         display:grid;
-        grid-template-rows: 2fr 4fr 1fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
         opacity:0;
         &.animated {
             animation: expand 0.75s ease forwards 0.2s;
         }
-        // grid-gap:1em;
-        .emailSender {
-            display:grid;
-            grid-template-rows: 1fr 1fr;
-            input {
-                margin:0.5em 0;
-                width:100%;
-                border-radius: 0.2rem;
-                font-size:1.5vw;
-                padding:0.5vw 1vw;
-                border:none;
-                background:#ECECEC;
-            }
-        }
-        .emailMessage {
-            margin:0.5em auto;
-            display:flex;
-            justify-content: center;
-            width:100%;
-            textarea {
-                padding:0.5vw 1vw;
-                width:100%;
-                border-radius: 0.2rem;
-                font-size:1.5vw;
-                // padding-left:1vw;
-                border:none;
-                background:#ECECEC;
-            }
+        fieldset {
+            margin:0.5em;
+            border:none;
 
-        }
-        .submitBtn{
-            input{
-                background-color: #4a9ead;
-                color: white;
-                // height: 5vh;
-                border-radius: 0.5rem;
-                line-height: 0.2;
-                padding: 0.5em;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top:0.5em;
-                font-size: 2vw;
-                &:hover {
-                    cursor: pointer;
-                    background-color: white;
-                    color: #4a9ead;
-                    border:2px solid #4a9ead;
-                    // border: red;
+            span {
+                // display:none;
+                font-size:1.5vw;
+                color: #4a9ead;
+                padding:1vw 1.5vw;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            input,textarea {
+                background-color:#ECECEC;
+                // margin:0.5em 0;
+                width:100%;
+                height:85%;
+                border-radius: 0.2rem;
+                font-size:2vw;
+                padding:0.5vw 1vw;
+                border:none;
+                background-color:#ECECEC;
+                &:focus {
+                    outline:none;
+                }
+            }
+            &.submitBtn{
+                input{
+                    background-color: #4a9ead;
+                    color: white;
+                    height:100%;
+                    // height: 5vh;
+                    border-radius: 0.5rem;
+                    line-height: 0.2;
+                    padding: 0.5em;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 2vw;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: white;
+                        color: #4a9ead;
+                        border:2px solid #4a9ead;
+                        // border: red;
+                    }
+                    &:focus {
+                        outline:none;
+                    }
                 }
             }
         }
-        
-        // grid-gap:0.3vw;
+        #success {
+            text-align: center;
+            font-size:2vw;
+            color: red;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
     }
 }
 
 /* for the tablet view */
 @media screen and (max-width:800px) {
     #contact {
-        // background-color: transparent;
-        // height:88vh;
-        // display:grid;
         h1 {
             font-size:2em
         }
@@ -144,37 +145,27 @@
         }
         .contactForm {
             width:60%;
-            // grid-row:4/5;
-            .emailSender {
+            fieldset {
+                span {
+                    font-size:1em;
+                    padding:1vw 1.5vw;
+                    font-family: 'Noto Sans', sans-serif;
 
-                input {
+                }
+                #success {
                     font-size:1.2em;
-                    &:focus{
-                        outline: none;
-                    }
                 }
-            }
-            .emailMessage {
-                textarea {
+                input,textarea {
                     font-size:1.2em;
-                    &:focus{
-                        outline: none;
-                    }
                 }
-
-    
-            }
-            .submitBtn{
-                input{
-                    font-size: 1.2em;
-                    &:focus{
-                        outline: none;
+                &.submitBtn{
+                    input{
+                        font-size: 1.2em;
                     }
                 }
             }
-            
-            // grid-gap:0.3vw;
         }
+
     }
 }
 
@@ -201,35 +192,6 @@
         }
         .contactForm {
             width:80%;
-            .emailSender {
-                input {
-                    font-size:1.2em;
-                    &:focus{
-                        outline: none;
-                    }
-                }
-            }
-            .emailMessage {
-                textarea {
-                    font-size:1.2em;
-                    &:focus{
-                        outline: none;
-                    }
-                }
-
-    
-            }
-            .submitBtn{
-                input{
-                    margin-top:1em;
-                    font-size: 1.2em;
-                    &:focus{
-                        outline: none;
-                    }
-                }
-            }
-            
-            // grid-gap:0.3vw;
         }
     }
 }

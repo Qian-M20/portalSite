@@ -230,64 +230,33 @@ window.onload = function(){
     /******************************** form submit section ********************************/
     $('.contactForm').on('submit', function(e){
         e.preventDefault();
-        let nameErr = '';
-        let emailErr = '';
-        let messageErr = '';
+        console.log('ello');
+        // validate the form input 
+        $.ajax({
+            type: 'POST',
+            url: "services/form.php",
+            data: new FormData(this),
+            dataType: "json",
+            contentType: false,
+            cache: false,
+            processData: false,
 
-        let ms_name = $('#ms_name').val();
-        let ms_email = $('#ms_email').val();
-        let emailMessage = $('#emailMessage').val();
-        const regName = /^[a-zA-Z ]+$/;
-        const regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            // beforeSend: function () {
+            //     //alert("Fading screen");
+            //     $('.submitBtn').attr("disabled", "disabled");
+            //     $('#editForm').css("opacity", "0.5");
+            // },
 
-        // validate the name input field
-        if(ms_name === ''){
-            nameErr = 'Name is required';
-        }else {
-            if (!regName.test(ms_name)){
-                nameErr = 'Only letters and white spaces allowed';
-            }
-        }
-
-        // validate the email input field
-        if(ms_email === ''){
-            emailErr = '*Email is required';
-        }else {
-            if (!regEmail.test(ms_email)){
-                emailErr = '*Invalid email format';
-            }
-        }
-        // validate the message input field
-        if(emailMessage === ''){
-            messageErr = '*Please leave your message';
-        }
-
-        // output the error messages
-        $('#nameErr').html(nameErr);
-        $('#emailErr').html(emailErr);
-        $('#messageErr').html(messageErr);
-
-
-        if(nameErr === '' && emailErr === '' && messageErr === ''){
-
-            $.ajax({
-                type: 'POST',
-                url: "services/form.php",
-                data: new FormData(this),
-                dataType: "json",
-                contentType: false,
-                cache: false,
-                processData: false,
-    
-                success: function (data) {
-                    // reset empty value 
-                    $('#ms_name').val('');
-                    $('#ms_email').val('');
-                    $('#emailMessage').val('');
-                    $('#success').html('Message sent, thank you for contacting us!');
-                }
-            });
-        }
+            // success: function (data) {
+            //     //alert("DONE: "+data);
+            //     var id = $("#id").val();
+            //     $(".hide").css("display", "none");
+            //     getActors();
+            //     $("#actors").css("display", "block");
+            //     $('#editForm').css("opacity", "");
+            //     $(".submitBtn").removeAttr("disabled");
+            // }
+        });
     })
     
     

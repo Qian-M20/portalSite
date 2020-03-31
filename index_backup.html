@@ -288,7 +288,7 @@
                         <p id="moreInfor">
                             The web app is a collaborative project built for Lakeridge Health Oshawa, with the aim to provide a pre-screening platform for physicians to check the eligibility of a patient for a certain clinical trial. 
                         </p>
-                        <button class="viewSite"><a href="collaborative/index.html" target="_blank">View Site</a></button>
+                        <button class="viewSite"><a href="responsiveSite/home.html" target="_blank">View Site</a></button>
                         <button class="exitBtn">X</button>
                 </div>
             </div>
@@ -490,25 +490,25 @@
 
         <form class="contactForm reveal-ele">
             <fieldset class="emailSender">
-                <input id="ms_name" type="text" name="name" placeholder="Name">
-                <span class="error" id="nameErr"></span>
+                <input type="text" name="name" placeholder="Name">
+                <span class="error" id="nameErr">*Name can't be empty</span>
             </fieldset>
 
             <fieldset class="emailSender">
-                <input id="ms_email" type="text" name="email" placeholder="Email">
-                <span class="error" id="emailErr"></span>
+                <input type="text" name="email" placeholder="Email">
+                <span class="error" id="emailErr">*Name can't be empty</span>
             </fieldset>
 
             <fieldset class="emailMessage">
                 <textarea name="emailMessage" type= "text" id="emailMessage" placeholder="Message"></textarea>
-                <span class="error" id="messageErr"></span>
+                <span class="error" id="messageErr">*Name can't be empty</span>
             </fieldset >
 
             <fieldset class="submitBtn">
                 <input name="submit" id="contactSubmit" type="submit" value="Submit">
             </fieldset>
 
-            <div id="success"></div>
+            <div id="success">Message sent, thank you for contacting us.</div>
         </form>
     </section>
     <footer>

@@ -79,7 +79,7 @@ window.onload = function(){
         // the corresponding section should be animated on
         $(".reveal-ele").each(function(){
             var botEle =$(this).offset().top + $(this).innerHeight();
-            var botWin = topContentPos+$(window).height()+30;
+            var botWin = topContentPos+$(window).height()+75;
             if(botEle<botWin)
             {
                 $(this).addClass('animated');
@@ -127,7 +127,8 @@ window.onload = function(){
         btn.addEventListener('click', function(){
             theID= this.id;
             $(`.wrapper.${theID}`).show(); 
-            $(`.proReviewContent`).addClass('active');    
+            $(`.proReviewContent`).addClass('active');  
+            $('html').addClass('stop-scrolling')
         });
     })
 
@@ -137,7 +138,8 @@ window.onload = function(){
         btn.addEventListener('click', function(){
             // console.log('closing button');
             $(`.wrapper.${theID}`).hide(); 
-            $(`.proReviewContent`).removeClass('active');       
+            $(`.proReviewContent`).removeClass('active');    
+            $('html').removeClass('stop-scrolling');
         });
     })
 

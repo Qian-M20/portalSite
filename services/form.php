@@ -22,10 +22,15 @@ if (!empty($name) &&  !empty($email) && !empty($emailMessage)) {
         foreach($_POST as $key => $value){
             $message_body .= "$key: $value\n";
         }
-    
-        $to = 'contact@qian-ma.com';
+        $from = 'contact@qian-ma.com';
+        $to = 'chelseaxi2018@gmail.com';
         $subject = 'Contact Form Submit';
-        mail($to, $subject, $message_body);
+
+        $headers = `From: $from \r\n`;
+
+        $headers .= `Reply-To: $email \r\n`;
+        
+        mail($to, $subject, $message_body, $headers);
 
     }catch (PDOException $e) {
         $errorCode["id"] = -2;

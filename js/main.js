@@ -247,7 +247,7 @@ window.onload = function(){
             nameErr = 'Name is required';
         }else {
             if (!regName.test(ms_name)){
-                nameErr = 'Only letters and white spaces allowed';
+                nameErr = '*Only letters and white spaces allowed';
             }
         }
 
